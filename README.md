@@ -1,6 +1,12 @@
 # obup
 
-This is the currently what I am using to determine whether my OpenBazaar Server instance is up and responding.  If it is not then it will stop/kill any proceses, update the server, then start the server.
+This is the currently what I am using to determine whether my OpenBazaar Server instance is up and responding.  If it is not then it will stop/kill any proceses, update the server, then start the server.  The process is:
+
+1. Log in to get session token.
+2. Use session token to get Profile.
+3. Comprare GUID returned from Profile to GUID in settings file.
+4. Restart openbazaard.py if unable to connect or get profile.
+
 
 ## Settings
 The first step to using the script is to set up the configuration file with the information needed to connect.  You can use the settings.conf.default file as a reference.  Filling it out should be pretty self explanatory.
