@@ -28,7 +28,7 @@ check.sh is the main script.  By providing test at the command line it won't try
 ```
 [Time to Login] [Time to get profile] [Total Check Time] : [Status Text]
 ```
-It is made this way to be easily parsable.
+It is made this way to be easily parsable.  Ideally the times will always be 0.0000s.  If they are not then your server and or instance may be lagging.
 
 
 ## Cron
