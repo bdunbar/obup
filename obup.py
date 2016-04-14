@@ -49,7 +49,7 @@ def getProfile(cookies, URL_PROFILE, REQUEST_TIMEOUT):
         return False
 
 
-obup = True
+obrestart = False 
 obstatus = "UP"
 oblogintime = 0
 obprofiletime = 0
@@ -62,14 +62,14 @@ cookies = obLogin(OBUSERNAME, OBPASSWORD, URL_LOGIN, REQUEST_TIMEOUT)
 oblogintime = (datetime.now() - beforetime).seconds
 
 if cookies == False:
-    obup = False
+    obrestart = True 
     obstatus = "Unable to Connect"
 
 if cookies == None:
-    obup = False
+    obrestart = False
     obstatus = "Invalid Login Credentials"
 
-if obup:
+if obstatus == "UP":
     # Now the session cookie to pull profile and check the GUID
     beforetime = datetime.now()
     guid = getProfile(cookies, URL_PROFILE, REQUEST_TIMEOUT)
@@ -77,16 +77,16 @@ if obup:
     
     if guid == False:
         obstatus = "Unable to get Profile"
-        obup = False
+        obrestart = True 
     elif guid != OBGUID: 
         obstatus = "Profile GUID does not match"
-        obup = False 
+        obrestart = False 
 
 totaltime = (datetime.now() - totaltime).seconds
 
 print "%.5fs %.5fs %.5fs : %s" % (oblogintime, obprofiletime, totaltime, obstatus)
-if obup:
-    sys.exit(0)
-else:
+if obrestart:
     sys.exit(1)
+else:
+    sys.exit(0)
 

@@ -14,6 +14,17 @@ I like to use ts to add timestamps to my log files.  You need to install the mor
 sudo apt-get install moreutils
 ```
 
+## Run
+```
+./check.sh test
+```
+check.sh is the main script.  By providing test at the command line it won't try to restart the server automatically if it fails to see the server up.  This will allow you to test your settings.  The output of the script is 3 times and then a text status.  The format is:
+```
+[Time to Login] [Time to get profile] [Total Check Time] : [Status Text]
+```
+It is made this way to be easily parsable.
+
+
 ## Cron
 I have the script run every 5 minutes.  Here is an example entry for cron.
 ```
