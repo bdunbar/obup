@@ -42,5 +42,5 @@ I have the script run every 5 minutes.  Here is an example entry for cron.
 ## Warranty/Support
 These scripts come **AS-IS**.  I don't mind answering questions or taking suggestions but I'm just sharing the scripts I use and not releasing a product.
 
-## Thanks
-Did you find any of this useful?  Tell me so.  I'm @serp and @obmod in the OpenBazaar network.
+## Thanks or Suggestions
+Did you find any of this useful?  Do you have a better way?  Tell me so.  I'm @serp and @obmod in the OpenBazaar network.
