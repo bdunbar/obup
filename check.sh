@@ -21,7 +21,7 @@ source settings.conf
 if [ $? != 0 ]
 then
    echo "RESTARTING OB"
-   #./ob_restart.sh 
+   ./ob_restart.sh 
 fi
 
 unset OBHOME

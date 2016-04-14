@@ -19,3 +19,8 @@ I have the script run every 5 minutes.  Here is an example entry for cron.
 ```
 */5 *   *   *   *   /home/ob/obup/check.sh 2>&1 | ts [\%Y.\%m.\%d.\%k.\%M.\%S] >> /home/ob/obup/check.log
 ```
+
+**__Be sure your script is working correctly before leaving cron running or else you might just have your server restarting every 5 minutes__**
+
+## Thanks
+Did you find any of this useful?  Tell me so.  I'm @serp and @obmod in the OpenBazaar network.
