@@ -22,5 +22,8 @@ I have the script run every 5 minutes.  Here is an example entry for cron.
 
 **__Be sure your script is working correctly before leaving cron running or else you might just have your server restarting every 5 minutes__**
 
+## Warranty/Support
+These scripts come **AS-IS**.  I don't mind answering questions or taking suggestions but I'm just sharing the scripts I'm currently using here and not releasing a product.
+
 ## Thanks
 Did you find any of this useful?  Tell me so.  I'm @serp and @obmod in the OpenBazaar network.
