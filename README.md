@@ -1,6 +1,6 @@
 # obup
 
-This is the currently what I am using to determine whether my OpenBazaar Server instance is up and responding.  If it is not then it will stop/kill any proceses, update the server, then start the server.  The process is:
+This is what I am using to determine whether my OpenBazaar Server instance is up and responding.  If it is not then it will stop/kill any proceses, update the server, then start the server.  The process is:
 
 1. Log in to get session token.
 2. Use session token to get Profile.
