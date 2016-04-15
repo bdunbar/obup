@@ -65,11 +65,11 @@ if cookies == False:
     obrestart = True 
     obstatus = "Unable to Connect"
 
-if cookies == None:
+elif cookies == None:
     obrestart = False
     obstatus = "Invalid Login Credentials"
 
-if obstatus == "UP":
+else:
     # Now the session cookie to pull profile and check the GUID
     beforetime = datetime.now()
     guid = getProfile(cookies, URL_PROFILE, REQUEST_TIMEOUT)
