@@ -21,7 +21,7 @@ source settings.conf
 if [ $? != 0 ]
 then
     echo "RESTARTING OB"
-    if [ $1 != "test" ]
+    if [ "$1" != "test" ]
     then
         ./ob_restart.sh 
     fi
