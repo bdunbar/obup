@@ -1,5 +1,6 @@
 export OBHOME="/home/myobuser/OpenBazaar-Server"  # The full path to your OpenBazaar-Server installation
-export OBUSERNAME='myobusername'            # Username to log into the Rest API     
+export OBUSERNAME='myobusername'            # Username to log into the Rest API
 export OBPASSWORD='myobpassword'            # Password to log into the Rest API
 export OBGUID='myobguid'                    # Not your @handle
 export OB_REST_PORT=18469                   # The REST port in case you changed it.  18469 is Default
+export OBALLOWEDIP=''	# Allow connections from this IP. Set to 0.0.0.0 to allow all or blank to ignore.

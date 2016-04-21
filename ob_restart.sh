@@ -15,6 +15,5 @@ rm -f /tmp/openbazaard.pid
 #echo "PICKLE DANCE"
 #rm -f ~/.openbazaar/cache.pickle
 echo "STARTING SERVER"
-python openbazaard.py start -d  
+if [ -z $OBALLOWEDIP ]; then python openbazaard.py start -d; else python openbazaard.py start -da $OBALLOWEDIP; fi
 echo "############################################################"
-
