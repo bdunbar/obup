@@ -16,14 +16,14 @@ then
 fi
 
 source settings.conf
-./obup.py 
+./obup.py
 
 if [ $? != 0 ]
 then
-    echo "RESTARTING OB"
+    logger -t openbazaard "RESTARTING OB"
     if [ "$1" != "test" ]
     then
-        ./ob_restart.sh 
+        ./ob_restart.sh
     fi
 fi
 

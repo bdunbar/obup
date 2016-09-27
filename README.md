@@ -1,10 +1,19 @@
 # obup
 
-This is what I am using to determine whether my OpenBazaar Server instance is up and responding.  If it is not then it will stop/kill any proceses, update the server, then start the server.  The process is:
+Forked from the very excellent jondale/obup
+
+Changes
+
+* Logger pipes output to syslog
+* Uses system facility to restart openbazaar
+* Cosmetic bits in the script
+
+
+This is what I am using to determine whether my OpenBazaar Server instance is up and responding.  If it is not then it will stop/kill any processes, update the server, then start the server.  The process is:
 
 1. Log in to get session token.
 2. Use session token to get Profile.
-3. Comprare GUID returned from Profile to GUID in settings file.
+3. Compare GUID returned from Profile to GUID in settings file.
 4. Restart openbazaard.py if unable to connect or get profile.
 
 
@@ -43,4 +52,7 @@ I have the script run every 5 minutes.  Here is an example entry for cron.
 These scripts come **AS-IS**.  I don't mind answering questions or taking suggestions but I'm just sharing the scripts I use and not releasing a product.
 
 ## Thanks or Suggestions
-Did you find any of this useful?  Do you have a better way?  Tell me so.  I'm @serp and @obmod in the OpenBazaar network.
+Did you find any of this useful?  Do you have a better way?  Tell me!
+
+@storefore in the OpenBazaar network.
+http://www.spacefore.com/
